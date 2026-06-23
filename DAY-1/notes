@@ -1,0 +1,78 @@
+need to learn about what is isinstance
+
+
+isinstance() is a built-in Python function used to check whether a variable belongs to a particular data type.
+isinstance(variable,datatype)
+
+
+print(type(None))
+<class 'NoneType'>
+
+Why?
+
+None is a special object in Python whose type is NoneType.
+
+
+
+{}        # Dictionary
+set()     # Empty Set
+
+
+
+
+
+## Bonus Interview Question
+
+```python
+a = True
+
+print(type(a))
+print(isinstance(a, int))
+print(a + 5)
+Answers
+type(a)
+Output:
+<class 'bool'>
+
+Reason:
+True is of bool datatype.
+
+isinstance(a, int)
+
+Output:
+True
+
+Reason:
+bool is a subclass of int in Python.
+
+a + 5
+
+Output:
+6
+
+Reason:
+True is treated as 1.
+
+True + 5 = 1 + 5 = 6
+
+Important Points
+
+True = 1
+False = 0
+
+True + True = 2
+
+False + 10 = 10
+
+isinstance(True, int) → True
+isinstance(False, int) → True
+
+
+### One-Line Revision
+
+- `type(True)` → `<class 'bool'>`
+- `isinstance(True, int)` → `True`
+- `True + 5` → `6`
+- `False + 5` → `5`
+- `True == 1` → `True`
+- `False == 0` → `True`
