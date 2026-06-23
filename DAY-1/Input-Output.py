@@ -138,7 +138,7 @@ print(type(x))
 age = input()
 print(age + 10)
 # Will it work or give an error?
-# it will give the error because input is string and 10 is int value so it gives value error
+# it will give the error because input is string and 10 is int value so it gives type error
 
 # Q22
 age = int(input())
@@ -158,7 +158,7 @@ x = input()
 print(type(x))
 # User enters:
 # True
-# Output:- <class 'bool'>
+# Output:- <class 'str'>
 
 # Q25
 x = input()

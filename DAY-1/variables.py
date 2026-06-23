@@ -121,7 +121,7 @@ x = 10
 print(id(x))
 x = 20
 print(id(x))
-# output:- two different memory addressess
+# output:- two different memory addresses
 # 18. What will be the output?
 a = 10
 b = 10
