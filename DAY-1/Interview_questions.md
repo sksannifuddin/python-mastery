@@ -77,3 +77,26 @@
 
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+
+# operators
+## TOP INTERVIEW QUESTIONS
+
+1. What are operators?
+2. Difference between = and ==?
+3. Difference between == and is?
+4. What is operator precedence?
+5. What is short-circuit evaluation?
+6. Difference between / and //?
+7. Difference between and and &?
+8. What is modulus operator?
+9. What is exponent operator?
+10. What are membership operators?
+11. What are identity operators?
+12. Why does True + True equal 2?
+13. Why does False + 10 equal 10?
+14. Why does a == b return True but a is b return False?
+15. Explain operator precedence order.
+
+
+---------------------------------------------------------------------------------------------------------------------------
