@@ -2,139 +2,156 @@
 # Q1
 
 # Create two tuples:
-
 # a = (10,20,30)
 # b = (40,50,60)
-
 # Concatenate them and print the result.
+a = (10,20,30)
+b = (40,50,60)
+c=a+b
+print(c)
 
 # Q2
-
 # Create:
-
 # a = ("Python","Java")
-
 # Repeat it 3 times and print the result.
+a = ("Python","Java")
+b=a*3
+print(b)
 
 # Q3
-
 # Compare:
-
 # a = (10,20)
 # b = (10,20)
-
 # Print:
-
 # a == b
 # a != b
+a = (10,20)
+b = (10,20)
+print(a==b)
+print(a!=b)
+
 # Q4
-
 # Compare:
-
 # a = (10,20)
 # b = (10,30)
-
 # Print:
-
 # a < b
 # a > b
+a = (10,20)
+b = (10,30)
+print(a<b)
+print(a>b)
+
 # Q5
-
 # Create:
-
 # a = (10,20)
 # b = (10,20)
-
 # Print:
-
 # a is b
 # a is not b
+a = (10,20)
+b = (10,20)
+print(a is b)
+print(a is not b)
+
 # Q6
-
 # Create:
-
 # numbers = (50,20,80,10,30)
-
 # Print:
-
 # min(numbers)
 # max(numbers)
 # sum(numbers)
+numbers = (50,20,80,10,30)
+print(sum(numbers))
+print(max(numbers))
+print(min(numbers))
+
 # Q7
-
 # Sort this tuple using sorted():
-
 # numbers = (50,20,80,10,30)
-
 # Print the result and its type.
+numbers=(50,20,80,10,30)
+num=sorted(numbers)
+print(num)
+print(type(numbers))
+
 
 # Q8
-
 # Convert this list to a tuple:
-
 # data = [10,20,30]
-
 # Print the tuple and its type.
+data = [10,20,30]
+a=(data)
+print(a)
+print(type(a))
 
 # Q9
-
 # Convert this tuple to a list:
-
 # data = (10,20,30)
-
 # Print the list and its type.
+data = (10,20,30)
+a=[data]
+print(a)
+print(type(a))
 
 # Q10
-
 # Use enumerate() on:
-
 # names = ("Sunny","Ravi","Ajay")
-
 # Print index and value.
+names = ("Sunny","Ravi","Ajay")
+for i, val in enumerate(names):
+    print(i,val)
 
 # Q11
-
 # Use zip() on:
-
 # names = ("Sunny","Ravi","Ajay")
 # marks = (90,80,70)
-
 # Print name and mark together.
+names = ("Sunny","Ravi","Ajay")
+marks = (90,80,70)
+a=zip(names , marks)
+print(tuple(a))
 
 # Q12
-
 # Unpack:
-
 # student = ("Sunny",21,"AIDS")
-
 # into:
-
 # name, age, branch
-
 # Print all values.
+student = ("Sunny",21,"AIDS")
+names,age,branch=student
+print(names)
+print(age)
+print(branch)
+
 
 # Q13
 
 # Use multiple assignment:
-
 # a,b,c = 10,20,30
-
 # Print all values.
+a,b,c = 10,20,30
+print(a)
+print(b)
+print(c)
 
 # Q14
-
 # Swap two variables using tuple unpacking:
+a = 100
+b = 200
+c=a,b
+b,a=c
+print(a,b)
 
-# a = 100
-# b = 200
 # Q15
 
 # Try to modify:
-
 # t = (10,20,30)
-
 # Change 20 to 200.
-
+t = (10,20,30)
+t.insert(1,200)
+print(t)
+# it gives AttributeError: 'tuple' object has no attribute 'insert'
 # Write the code and comment the error.
 
 # Q16
@@ -142,15 +159,16 @@
 # Convert tuple to list, modify it, and convert back:
 
 # t = (10,20,30)
-
 # Change 20 to 200.
+t = (10,20,30)
+b=list(t)
+b[1]=200
+t=tuple(b)
+print(t)
 
 # Q17
-
 # Create:
-
 # t = ([10,20], [30,40])
-
 # Append 50 to the first inner list and print t.
 
 # Q18
