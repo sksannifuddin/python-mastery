@@ -85,7 +85,7 @@ print(total)
 s=((10,20),[30,40],(50,60))
 found=False
 for i in s:
-    if i==s:
+    if i==40:
         found = True
         break
 print(found)
@@ -97,7 +97,8 @@ print(found)
 t=(10,20,30,20,40,20)
 count=0
 for i in t:
-    count+=1
+    if i ==20:
+        count+=1
 print(count)
 
 
@@ -136,7 +137,7 @@ print(t)
 # Create a tuple containing only odd numbers from 1 to 20.
 t=tuple()
 for i in range(1,21):
-    if i%2==0:
+    if i%2!=0:
         t+=(i,)
 print(t)
 
@@ -175,7 +176,7 @@ print(multiply)
 # for row in a:
 #     print(row)
 # output:- (10,20)
-# (3,4)
+# (30,40)
 # Q23
 # a=(x*x for x in range(3))
 # print(tuple(a))
@@ -186,7 +187,7 @@ print(multiply)
 
 # a,b=fun()
 # print(a,b)
-# output:- (10,20)
+# output:- 10,20
 # Q25
 # def fun(*x):
 #     print(len(x))
@@ -198,7 +199,7 @@ print(multiply)
 #     print(x)
 
 # fun(5)
-# output:- 5
+# output:- (5,)
 # Q27
 # a=((1,2),(3,4))
 # print(len(a))
@@ -237,23 +238,77 @@ print(t)
 # Can a tuple be used as a dictionary key?
 # Show with code.
 
+t = (10,20,30)
+
+d = {t: "Python"}
+
+print(d)
 # Q34
 
 # Can a tuple containing a list be used as a dictionary key?
 # Explain with code.
 
+t = ([10,20],30)
+
+# d = {t:"Python"}
+
+# TypeError: unhashable type: 'list'
+
+# A tuple containing a mutable object (list)
+# cannot be used as a dictionary key.
 # Q35
 
 # Find the largest element from a nested tuple.
 
+t = (
+    (10,20),
+    (30,40),
+    (50,60)
+)
+
+largest = t[0][0]
+
+for row in t:
+    for value in row:
+        if value > largest:
+            largest = value
+
+print(largest)
 # Q36
 
 # Find the smallest element from a nested tuple.
 
+t = (
+    (10,20),
+    (30,40),
+    (50,60)
+)
+
+smallest = t[0][0]
+
+for row in t:
+    for value in row:
+        if value < smallest:
+            smallest = value
+
+print(smallest)
 # Q37
 
 # Find the sum of all elements in a nested tuple.
 
+t = (
+    (10,20),
+    (30,40),
+    (50,60)
+)
+
+total = 0
+
+for row in t:
+    for value in row:
+        total += value
+
+print(total)
 # Q38
 
 # Flatten
@@ -263,6 +318,20 @@ print(t)
 # into
 
 # (1,2,3,4,5,6)
+
+t = (
+    (1,2),
+    (3,4),
+    (5,6)
+)
+
+flat = ()
+
+for row in t:
+    for value in row:
+        flat += (value,)
+
+print(flat)
 # Q39
 
 # Using *args, find
@@ -272,13 +341,39 @@ print(t)
 
 # without using sum().
 
+def calculate(*args):
+
+    total = 0
+    count = 0
+
+    for i in args:
+        total += i
+        count += 1
+
+    average = total / count
+
+    return total, average
+
+
+total, average = calculate(10,20,30,40,50)
+
+print(total)
+print(average)
 # Q40
 
 # Write a function that returns three values.
 
 # Receive them using multiple assignment.
 
-# PART 4 — Google / Amazon Challenge
+def student():
+
+    return "Sunny",21,"AIDS"
+
+name, age, branch = student()
+
+print(name)
+print(age)
+print(branch)
 # Q41
 
 # Given
@@ -313,4 +408,120 @@ print(t)
 # Return the largest and smallest values from a function and unpack them.
 # Print the total number of iterations performed.
 
-# This completes Tuple Module 3. After this, your tuple preparation will be placement-ready, and we'll move on to Sets.
+matrix = (
+    (10,20,30),
+    (40,50,60),
+    (70,80,90)
+)
+
+total = 0
+count = 0
+
+largest = matrix[0][0]
+smallest = matrix[0][0]
+
+even_count = 0
+odd_count = 0
+
+found = False
+
+frequency = {}
+
+flat = ()
+
+iterations = 0
+
+for row in matrix:
+
+    print(row)
+
+    for value in row:
+
+        print(value)
+
+        iterations += 1
+
+        total += value
+
+        count += 1
+
+        flat += (value,)
+
+        if value > largest:
+            largest = value
+
+        if value < smallest:
+            smallest = value
+
+        if value % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+
+        if value == 50:
+            found = True
+
+        if value in frequency:
+            frequency[value] += 1
+        else:
+            frequency[value] = 1
+
+average = total / count
+
+print("Total:", total)
+print("Average:", average)
+
+print("Largest:", largest)
+print("Smallest:", smallest)
+
+print("Even Count:", even_count)
+print("Odd Count:", odd_count)
+
+print("50 Exists:", found)
+
+print(frequency)
+
+print(flat)
+
+squares = tuple(x*x for x in flat)
+
+print(squares)
+
+
+def total_sum(*args):
+
+    total = 0
+
+    for i in args:
+        total += i
+
+    return total
+
+
+print(total_sum(*flat))
+
+
+def large_small(*args):
+
+    largest = args[0]
+    smallest = args[0]
+
+    for i in args:
+
+        if i > largest:
+            largest = i
+
+        if i < smallest:
+            smallest = i
+
+    return largest, smallest
+
+
+largest, smallest = large_small(*flat)
+
+print(largest)
+print(smallest)
+
+print("Iterations:", iterations)
+
+# This completes Tuple Module 3 (100%). After this, you'll be ready to move on to Sets Module 1 according to your timetable.
