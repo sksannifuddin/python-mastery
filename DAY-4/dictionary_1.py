@@ -33,7 +33,7 @@ print(student["name"])
 # Q4
 # Print only the age using indexing.
 student={"name":"sunny","age":21}
-print(list(student.items())[1])
+print(student["age"])
 
 # Q5
 # Create
@@ -98,7 +98,7 @@ print(students)
 # Print the result.
 students={"name":"sunny","age":20,"college":"N.B.K.R"}
 students.clear()
-print(student)
+print(students)
 
 # Q11
 # Copy a dictionary using
@@ -145,7 +145,7 @@ for i in students.keys():
 # Q15
 # Print only all values using a loop.
 students={"name":"sunny","age":20,"college":"N.B.K.R"}
-for i in students.values:
+for i in students.values():
     print(i)
 
 # Q16
@@ -201,7 +201,7 @@ marks={
 "Science":80,
 "English":85
 }
-highest=0
+highest=list(marks.values())[0]
 for i,val in marks.items():
     if val>highest:
         highest=val
@@ -232,8 +232,8 @@ marks={
 "Science":80,
 "English":85
 }
+found=False
 for i in marks:
-    found=False
     if i == "Science":
         found=True
         break
@@ -265,91 +265,153 @@ print(d)
 # Q26
 # d={"A":10,"B":20}
 # print(d["A"])
-# output:- 
+# output:- 10
 # Q27
 # d={}
 # print(type(d))
+# output:- <class 'dict'>
 # Q28
 # d={"A":10}
 # d["B"]=20
 # print(d)
+# output:- {'A': 10, 'B': 20}
 # Q29
 # d={"A":10,"B":20}
 # print(len(d))
+# output:- 2
 # Q30
 # d={"A":10}
 # print("A" in d)
+# output:- True
 # Q31
 # d={"A":10}
 # print("B" not in d)
+# output:- True
 # Q32
 # d={"A":10,"B":20}
-
 # for k in d:
 #     print(k)
+# output:- A,B
 # Q33
 # d={"A":10,"B":20}
-
 # for v in d.values():
 #     print(v)
+# output:- 10,20
 # Q34
 # d={"A":10,"B":20}
-
 # for k,v in d.items():
 #     print(k,v)
+# output:- A 10 ,B 20
+
 # Q35
 # d={"A":10}
-
 # d.update({"B":20})
-
 # print(d)
+# output:- {"A":10,"B":20}
+
 # PART 3 — Placement Questions
 # Q36
-
 # Without using len(), count total keys.
+# Q36
+# Without using len(), count total keys.
+d={"A":10,"B":20,"C":30}
+
+count=0
+for key in d:
+    count+=1
+
+print(count)
 
 # Q37
-
 # Without using sum(), find the total of all values.
+d={"A":10,"B":20,"C":30}
+
+total=0
+for value in d.values():
+    total+=value
+
+print(total)
 
 # Q38
-
 # Without using max(), find the maximum value.
+d={"A":10,"B":20,"C":30}
+
+maximum=list(d.values())[0]
+
+for value in d.values():
+    if value>maximum:
+        maximum=value
+
+print(maximum)
 
 # Q39
-
 # Without using min(), find the minimum value.
+d={"A":10,"B":20,"C":30}
+
+minimum=list(d.values())[0]
+
+for value in d.values():
+    if value<minimum:
+        minimum=value
+
+print(minimum)
 
 # Q40
-
 # Explain the difference between:
-
 # []
 # get()
-
 # with code.
 
+d={"A":10,"B":20}
+
+print(d["A"])
+print(d.get("A"))
+
+# print(d["C"])      # KeyError
+print(d.get("C"))    # None
+print(d.get("C",0))  # 0
+
+
+
 # Q41
-
 # Explain the difference between:
-
 # pop()
 # popitem()
 # del
-
 # with examples.
 
+d={"A":10,"B":20,"C":30}
+
+x=d.pop("B")
+print(x)
+print(d)
+
+item=d.popitem()
+print(item)
+print(d)
+
+del d["A"]
+print(d)
+
 # Q42
-
 # Why must dictionary keys be immutable?
-
 # Explain with an example.
 
+# Dictionary keys must be immutable because Python uses their hash value
+# to store and find data. If a key changes, its hash changes, so Python
+# cannot locate the value correctly.
+
+d={(10,20):"Tuple key"}
+print(d)
+
 # Q43
-
 # Can a list be used as a dictionary key?
-
 # Show with code and explain the error.
+
+# Lists cannot be dictionary keys because lists are mutable and unhashable.
+
+# d={[10,20]:"List key"}
+# TypeError: unhashable type: 'list'
 
 # PART 4 — Google / Amazon Challenge
 # Q44
@@ -384,6 +446,68 @@ print(d)
 # Print all marks
 # Print subject and mark together
 # Count iterations
+# Q44
+
+student = {
+    "name": "Sunny",
+    "Math": 90,
+    "Science": 80,
+    "English": 95,
+    "Python": 100
+}
+
+total = 0
+highest = student["Math"]
+lowest = student["Math"]
+subject_count = 0
+iterations = 0
+python_found = False
+ai_found = False
+
+for key, value in student.items():
+    iterations += 1
+
+    if key == "Python":
+        python_found = True
+
+    if key == "AI":
+        ai_found = True
+
+    if isinstance(value, int):
+        total += value
+        subject_count += 1
+
+        if value > highest:
+            highest = value
+
+        if value < lowest:
+            lowest = value
+
+average = total / subject_count
+
+print("Total Marks:", total)
+print("Average:", average)
+print("Highest Mark:", highest)
+print("Lowest Mark:", lowest)
+print("Total Subjects:", subject_count)
+
+print("Python Exists:", python_found)
+print("AI Exists:", ai_found)
+
+print("\nSubjects:")
+for key in student.keys():
+    print(key)
+
+print("\nMarks:")
+for value in student.values():
+    print(value)
+
+print("\nSubject and Mark:")
+for key, value in student.items():
+    print(key, value)
+
+print("\nIterations:", iterations)
+
 # Q45
 
 # Given
@@ -410,3 +534,51 @@ print(d)
 # Count total employees
 # Print employee IDs having salary greater than 60000
 
+# Q45
+employees={
+101:50000,
+102:65000,
+103:45000,
+104:80000,
+105:70000
+}
+
+total=0
+count=0
+highest=list(employees.values())[0]
+lowest=list(employees.values())[0]
+found_103=False
+found_110=False
+
+for emp_id,salary in employees.items():
+    print(emp_id)
+    print(salary)
+    print(emp_id,salary)
+
+    total+=salary
+    count+=1
+
+    if salary>highest:
+        highest=salary
+
+    if salary<lowest:
+        lowest=salary
+
+    if emp_id==103:
+        found_103=True
+
+    if emp_id==110:
+        found_110=True
+
+    if salary>60000:
+        print("Salary greater than 60000:", emp_id)
+
+average=total/count
+
+print("Total Salary:", total)
+print("Average Salary:", average)
+print("Highest Salary:", highest)
+print("Lowest Salary:", lowest)
+print("103 Exists:", found_103)
+print("110 Exists:", found_110)
+print("Total Employees:", count)
