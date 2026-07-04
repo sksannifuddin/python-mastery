@@ -408,12 +408,13 @@ print(n[1])
 # Print index and value together
 # Number of iterations
 
-nnumbers=(10,20,30,40,50,60,70,80,90,100)
+numbers=(10,20,30,40,50,60,70,80,90,100)
 total=0
 largest=numbers[0]
 smallest=numbers[0]
 even_count=0
 odd_count=0
+iterations=0
 for i in numbers:
     total+=i
     if i>largest:
@@ -440,4 +441,5 @@ for i in range(len(numbers)-1,-1,-1):
 for i,v in enumerate(numbers):
     print(i,v)
 for i in numbers:
-    print(i)
+    iterations+=1
+print(iterations)
