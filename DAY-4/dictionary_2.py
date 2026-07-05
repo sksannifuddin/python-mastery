@@ -68,71 +68,72 @@ print(d1|d2)
 # keys=["A","B","C"]
 # value=0
 keys=["A","B","C"]
-print(dict.fromkeys(value=0))
+print(dict.fromkeys(keys,0))
 
 
 # Q8
 
 # Create a dictionary using
-
 # dict()
-
 # from a list of tuples.
-
+l=[("A",10),("B",20),("C",30)]
+print(dict(l))
 # Example
 
 # [("A",10),("B",20),("C",30)]
+
 # Q9
-
 # Create a dictionary comprehension
-
 # Squares of numbers from 1–10.
-
 # Expected
-
 # {1:1,2:4,3:9...}
+squares={x:x**2 for x in range(1,11) }
+print(squares)
+
 # Q10
-
 # Create a dictionary comprehension
-
 # Only even numbers from 1–20.
-
 # Expected
-
 # {2:4,4:16...}
+evens={x:x**2 for x in range(1,21) if x%2==0 }
+print(evens)
+
 # Q11
-
 # Convert
-
 # names=["Sunny","Ravi","Ajay"]
-
 # to
-
 # {
 # "Sunny":5,
 # "Ravi":4,
 # "Ajay":4
 # }
-
 # using dictionary comprehension.
+names=["Sunny","Ravi","Ajay"]
+name={x:len(x) for x in names}
+print(name)
 
 # Q12
-
 # Create a nested dictionary.
-
 # students={
 # 1:{"name":"Sunny","age":21},
 # 2:{"name":"Ravi","age":22}
 # }
-
 # Print the complete dictionary.
+students={
+1:{"name":"Sunny","age":21},
+2:{"name":"Ravi","age":22}
+}
+print(students)
 
 # Q13
-
 # Print only Sunny's age from the nested dictionary.
+students={
+1:{"name":"Sunny","age":21},
+2:{"name":"Ravi","age":22}
+}
+print(students[1]["age"])
 
 # Q14
-
 # Print every student's details using loops.
 
 # Expected
