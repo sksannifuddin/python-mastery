@@ -135,62 +135,84 @@ print(students[1]["age"])
 
 # Q14
 # Print every student's details using loops.
-
 # Expected
-
 # ID : 1
 # name Sunny
 # age 21
+details={"ID" : 1,
+"name" : "Sunny",
+"age" : 21}
+for i,value in details.items():
+    print(i,value)
+
 # Q15
-
 # Create
-
 # employees=[
 # {"id":101,"salary":50000},
 # {"id":102,"salary":60000}
 # ]
-
 # Print every employee's salary.
-
+employees=[
+{"id":101,"salary":50000},
+{"id":102,"salary":60000}
+]
+for i in employees:
+    print(i["salary"])
+    
 # Q16
-
 # Create
-
 # {
 # "Math":[90,80,70],
 # "Science":[85,75,65]
 # }
-
 # Print every mark using nested loops.
+marks={
+"Math":[90,80,70],
+"Science":[85,75,65]
+}
+for i in marks:
+    for j in marks[i]:
+        print(j)
+
 
 # Q17
-
 # Reverse this dictionary.
-
 # {
 # "A":10,
 # "B":20,
 # "C":30
 # }
-
 # Expected
-
 # {
 # 10:"A",
 # 20:"B",
 # 30:"C"
 # }
+A={
+"A":10,
+"B":20,
+"C":30
+}
+reverse={}
+for i,values in A.items():
+    reverse[values]=i
+print(reverse)
+
 # Q18
-
 # Sort a dictionary by keys.
-
 # {
 # "C":30,
 # "A":10,
 # "B":20
 # }
-# Q19
+A={
+"C":30,
+"A":10,
+"B":20
+}
+print(dict(sorted(A.items())))
 
+# Q19
 # Sort a dictionary by values.
 
 # {
