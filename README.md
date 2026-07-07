@@ -1,54 +1,19 @@
-# Placement Preparation 2027
+# 🐍 Python Mastery
 
-This repository contains my complete placement preparation journey for 2027.
+Welcome to my **Python Mastery** repository!
 
-I started this repository to track my daily learning progress and improve my consistency in coding, problem-solving, data science, machine learning, and AI.
+This repository documents my complete journey of learning and mastering Python—from the fundamentals to advanced concepts. I use it to practice consistently, improve my problem-solving skills, and build a strong programming foundation for Artificial Intelligence, Data Science, and Machine Learning.
 
-## Goal
+---
 
-To become placement-ready before December 2026 by completing:
+## 🎯 Goal
 
-* Python Programming
-* Object-Oriented Programming
-* File Handling and Exception Handling
-* Advanced Python
-* NumPy
-* Pandas
-* Matplotlib
-* Seaborn
-* SQL
-* Statistics
-* Feature Engineering
-* Machine Learning
-* Deep Learning
-* Natural Language Processing
-* Generative AI
-* End-to-End Projects
+To develop a strong understanding of Python by mastering:
 
-## Daily Progress
-
-I will update this repository every day with:
-
-* Python programs
-* Practice questions
-* Notes
-* Interview questions
-* Mini projects
-* Data analysis notebooks
-* Machine learning projects
-
-## Current Phase
-
-### Phase 1: Python Complete Revision
-
-Start Date: June 23, 2026
-Target Completion: July 10, 2026
-
-Topics:
-
-* Variables
-* Data Types
+* Python Fundamentals
+* Variables & Data Types
 * Operators
+* Input & Output
 * Conditional Statements
 * Loops
 * Strings
@@ -57,30 +22,125 @@ Topics:
 * Sets
 * Dictionaries
 * Functions
-* OOP
+* Lambda Functions
+* Map, Filter & Reduce
+* Object-Oriented Programming (OOP)
 * File Handling
 * Exception Handling
-* Advanced Python
+* Iterators & Generators
+* Decorators
+* Modules & Packages
+* Advanced Python Concepts
 
-## Long-Term Roadmap
+---
 
-### June 23 – July 10
+## 📚 Repository Contents
 
-Python Complete Revision
+This repository includes:
 
-### July 11 – July 25
+* 🐍 Python programs
+* 💡 Coding practice questions
+* 📝 Detailed notes
+* 🎯 Interview questions
+* 🚀 Mini projects
+* 🧩 Problem-solving exercises
+* 📖 Concept explanations
+* 💻 Hands-on coding examples
 
-NumPy, Pandas, Matplotlib, Seaborn, SQL, Statistics, Feature Engineering
+---
 
-### July 26 onwards
+## 📅 Learning Roadmap
 
-Machine Learning
+### Phase 1 — Python Fundamentals
 
-### After Machine Learning
+* Variables
+* Data Types
+* Operators
+* Input & Output
+* Type Casting
 
-Deep Learning, NLP, GenAI, MLOps, and Projects
+### Phase 2 — Control Flow
 
-## Purpose
+* Conditional Statements
+* Loops
+* Pattern Programs
 
-This repository is created to show my consistency, learning progress, and practical preparation for placements.
+### Phase 3 — Data Structures
+
+* Strings
+* Lists
+* Tuples
+* Sets
+* Dictionaries
+
+### Phase 4 — Functions
+
+* User-Defined Functions
+* Recursion
+* Lambda Functions
+* Map, Filter & Reduce
+
+### Phase 5 — Object-Oriented Programming
+
+* Classes & Objects
+* Constructors
+* Inheritance
+* Polymorphism
+* Encapsulation
+* Abstraction
+
+### Phase 6 — File Handling & Exception Handling
+
+* Reading & Writing Files
+* Working with CSV Files
+* Error Handling
+* Custom Exceptions
+
+### Phase 7 — Advanced Python
+
+* Modules & Packages
+* Iterators
+* Generators
+* Decorators
+* Comprehensions
+* Context Managers
+
+---
+
+## 🚀 Purpose
+
+The purpose of this repository is to:
+
+* Build a strong Python foundation.
+* Improve coding and problem-solving skills.
+* Prepare for technical interviews.
+* Develop clean and efficient coding practices.
+* Create a solid base for Machine Learning, Deep Learning, and AI.
+
+---
+
+## 📈 Progress
+
+I update this repository regularly with new programs, notes, practice problems, and projects as I continue my Python learning journey.
+
+---
+
+## 🎯 Next Step
+
+After completing Python Mastery, I'll continue with dedicated repositories for:
+
+* 📊 Data Analysis Mastery
+* 📈 Statistics for Machine Learning
+* 🗄️ SQL for Data Science
+* 🤖 Machine Learning Mastery
+* 🧠 Deep Learning Mastery
+* 💬 NLP Mastery
+* ⚡ Generative AI Mastery
+* ☁️ MLOps Mastery
+
+---
+
+### 💡 Motto
+
+> **"Master the fundamentals, build consistently, and let every project reflect your growth."**
 
