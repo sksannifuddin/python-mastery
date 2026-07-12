@@ -168,30 +168,89 @@ print(smallest(1,2,3,4,5,5,6))
     
 
 # Return sum and product together.
+def sum_product(*args):
+    sum=0
+    product=1
+    for i in args:
+        sum+=i
+        product*=i
+    return sum,product
+print(sum_product(1,2,3,4,5))
+
 # Unpack returned values.
+a,b=sum_product(1,2,3,4,5)
+print(a)
+print(b)
 # Default arguments.
+def greet(name="sunny"):
+    print(f"hello {name}! Welcome to Google office")
+    
 # Keyword arguments.
+def personal_details(**kwargs):
+    for key,val in kwargs.items():
+        print(f"{key} : {val} ")
+personal_details(name="sunny",age="21",college="Nbkr")
+
 # Mix positional and keyword arguments.
-# Use *args.
+def details(*args,**kwargs):
+    for val in args:
+        print(f"positional arguments : {val}")
+    for key,val in kwargs.items():
+        print(f"{key} : {val}")
+details(1,2,3,4,name="sunny",age="21",college="Nbkr")
+
 # Find total using *args.
+def total(*args):
+    total=0
+    for i in args:
+        total+=1
+    return total
+print(total(1,2,3,4,5,6,7,8,9,10))
 # Find average using *args.
+
+def average(*args):
+    total=0
+    count=0
+    for i in args:
+        total+=i
+        count+=1
+    average=total/count
+    return average
+print(average(1,2,3,4,5,6,7,8,9,10))
+
+
 # Google Mini Challenge using *args.
 # Part 2 — Output Prediction (5)
 # return vs print
+
 # Local variable output
+
 # Global variable output
+
 # Default parameter output
+
 # Keyword argument output
+
 # Part 3 — Placement Questions (5)
 # Difference between parameter and argument.
+
 # Difference between local and global variables.
+
 # Difference between return and print.
+
 # Why use functions?
+
 # Difference between positional and keyword arguments.
+
 # Part 4 — Google/Amazon Challenge (5)
+
 # Student Result Analyzer
+
 # Employee Salary Analyzer
+
 # Bank Interest Calculator
+
 # Marks Calculator
+
 # Universal Number Analyzer
 
